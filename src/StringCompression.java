@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class StringCompression {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
@@ -9,7 +9,6 @@ public class Main {
         int count = 1;
 
         for (int i = 0; i < s.length(); i++) {
-            
             if (i < s.length() - 1 && s.charAt(i) == s.charAt(i + 1)) {
                 count++;
             } else {
@@ -19,7 +18,6 @@ public class Main {
             }
         }
 
-        // FIXED CONDITION
         if (compressed.length() > s.length()) {
             System.out.println(s);
         } else {
